@@ -1,0 +1,60 @@
+2023-09-06 08:28:02,478 laptop-94lsl877 shop-dev.jar[22580] INFO  [io.quarkus] (Quarkus Main Thread) shop 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.2.2.Final) started in 2.570s. Listening on: http://192.168.56.1:8180
+2023-09-06 08:28:02,479 laptop-94lsl877 shop-dev.jar[22580] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-09-06 08:28:02,480 laptop-94lsl877 shop-dev.jar[22580] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cache, cdi, hibernate-orm, hibernate-orm-panache, jaeger, jdbc-postgresql, keycloak-authorization, narayana-jta, oidc, rest-client-reactive, rest-client-reactive-jackson, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, smallrye-fault-tolerance, smallrye-metrics, smallrye-openapi, smallrye-opentracing, swagger-ui, vertx]
+2023-09-06 08:28:02,481 laptop-94lsl877 shop-dev.jar[22580] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Live reload total time: 7.823s 
+2023-09-06 08:28:02,482 laptop-94lsl877 shop-dev.jar[22580] INFO  [io.qua.dep.dev.RuntimeUpdatesProcessor] (vert.x-worker-thread-1) Live reload took more than 4 seconds, you may want to enable instrumentation based reload (quarkus.live-reload.instrumentation=true). This allows small changes to take effect without restarting Quarkus.
+2023-09-06 08:28:39,808 laptop-94lsl877 shop-dev.jar[22580] WARN  [org.hib.eng.jdb.spi.SqlExceptionHelper] (executor-thread-1) SQL Error: 0, SQLState: null
+2023-09-06 08:28:39,811 laptop-94lsl877 shop-dev.jar[22580] ERROR [org.hib.eng.jdb.spi.SqlExceptionHelper] (executor-thread-1) Interrupted while acquiring
+2023-09-06 08:28:41,534 laptop-94lsl877 shop-dev.jar[22580] ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (executor-thread-1) HTTP Request to /shops failed, error id: f760a8bf-115c-4d42-93fa-e70cb97b7822-1: org.eclipse.microprofile.faulttolerance.exceptions.TimeoutException: io.redeasy.shopcar.resource.ShopResource#getAll timed out
+	at io.smallrye.faulttolerance.core.timeout.Timeout.timeoutException(Timeout.java:91)
+	at io.smallrye.faulttolerance.core.timeout.Timeout.doApply(Timeout.java:78)
+	at io.smallrye.faulttolerance.core.timeout.Timeout.apply(Timeout.java:30)
+	at io.smallrye.faulttolerance.core.metrics.MetricsCollector.doApply(MetricsCollector.java:101)
+	at io.smallrye.faulttolerance.core.metrics.MetricsCollector.apply(MetricsCollector.java:91)
+	at io.smallrye.faulttolerance.FaultToleranceInterceptor.syncFlow(FaultToleranceInterceptor.java:255)
+	at io.smallrye.faulttolerance.FaultToleranceInterceptor.intercept(FaultToleranceInterceptor.java:182)
+	at io.smallrye.faulttolerance.FaultToleranceInterceptor_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at io.redeasy.shopcar.resource.ShopResource_Subclass.getAll(Unknown Source)
+	at io.redeasy.shopcar.resource.ShopResource$quarkusrestinvoker$getAll_ff0bca512259cdc61f4195f154f924d414f41466.invoke(Unknown Source)
+	at org.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(InvocationHandler.java:29)
+	at io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(QuarkusResteasyReactiveRequestContext.java:141)
+	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:145)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:576)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+2023-09-06 08:28:42,806 laptop-94lsl877 shop-dev.jar[22580] ERROR [io.qua.ver.htt.run.QuarkusErrorHandler] (executor-thread-2) HTTP Request to /shops failed, error id: f760a8bf-115c-4d42-93fa-e70cb97b7822-2: org.eclipse.microprofile.faulttolerance.exceptions.TimeoutException: io.redeasy.shopcar.resource.ShopResource#getAll timed out
+	at io.smallrye.faulttolerance.core.timeout.Timeout.timeoutException(Timeout.java:91)
+	at io.smallrye.faulttolerance.core.timeout.Timeout.doApply(Timeout.java:78)
+	at io.smallrye.faulttolerance.core.timeout.Timeout.apply(Timeout.java:30)
+	at io.smallrye.faulttolerance.core.metrics.MetricsCollector.doApply(MetricsCollector.java:101)
+	at io.smallrye.faulttolerance.core.metrics.MetricsCollector.apply(MetricsCollector.java:91)
+	at io.smallrye.faulttolerance.FaultToleranceInterceptor.syncFlow(FaultToleranceInterceptor.java:255)
+	at io.smallrye.faulttolerance.FaultToleranceInterceptor.intercept(FaultToleranceInterceptor.java:182)
+	at io.smallrye.faulttolerance.FaultToleranceInterceptor_Bean.intercept(Unknown Source)
+	at io.quarkus.arc.impl.InterceptorInvocation.invoke(InterceptorInvocation.java:42)
+	at io.quarkus.arc.impl.AroundInvokeInvocationContext.perform(AroundInvokeInvocationContext.java:30)
+	at io.quarkus.arc.impl.InvocationContexts.performAroundInvoke(InvocationContexts.java:27)
+	at io.redeasy.shopcar.resource.ShopResource_Subclass.getAll(Unknown Source)
+	at io.redeasy.shopcar.resource.ShopResource$quarkusrestinvoker$getAll_ff0bca512259cdc61f4195f154f924d414f41466.invoke(Unknown Source)
+	at org.jboss.resteasy.reactive.server.handlers.InvocationHandler.handle(InvocationHandler.java:29)
+	at io.quarkus.resteasy.reactive.server.runtime.QuarkusResteasyReactiveRequestContext.invokeHandler(QuarkusResteasyReactiveRequestContext.java:141)
+	at org.jboss.resteasy.reactive.common.core.AbstractResteasyReactiveContext.run(AbstractResteasyReactiveContext.java:145)
+	at io.quarkus.vertx.core.runtime.VertxCoreRecorder$14.runWith(VertxCoreRecorder.java:576)
+	at org.jboss.threads.EnhancedQueueExecutor$Task.run(EnhancedQueueExecutor.java:2513)
+	at org.jboss.threads.EnhancedQueueExecutor$ThreadBody.run(EnhancedQueueExecutor.java:1538)
+	at org.jboss.threads.DelegatingRunnable.run(DelegatingRunnable.java:29)
+	at org.jboss.threads.ThreadLocalResettingRunnable.run(ThreadLocalResettingRunnable.java:29)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+2023-09-06 08:30:35,310 laptop-94lsl877 shop-dev.jar[22580] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Console Shutdown Hook) Failed to write out.
+2023-09-06 08:30:35,384 laptop-94lsl877 shop-dev.jar[22580] WARNING [org.aes.rea.ter.imp.AbstractWindowsTerminal] (Quarkus Main Thread) Failed to write out.
+2023-09-06 08:30:35,384 laptop-94lsl877 shop-dev.jar[22580] INFO  [io.quarkus] (Quarkus Main Thread) shop stopped in 0.087s

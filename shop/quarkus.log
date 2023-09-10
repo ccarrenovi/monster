@@ -1,0 +1,16 @@
+2023-09-06 08:31:51,972 laptop-94lsl877 shop-dev.jar[8740] INFO  [io.quarkus] (Quarkus Main Thread) shop 1.0.0-SNAPSHOT on JVM (powered by Quarkus 3.2.2.Final) started in 10.480s. Listening on: http://192.168.56.1:8180
+2023-09-06 08:31:51,979 laptop-94lsl877 shop-dev.jar[8740] INFO  [io.quarkus] (Quarkus Main Thread) Profile dev activated. Live Coding activated.
+2023-09-06 08:31:51,980 laptop-94lsl877 shop-dev.jar[8740] INFO  [io.quarkus] (Quarkus Main Thread) Installed features: [agroal, cache, cdi, hibernate-orm, hibernate-orm-panache, jaeger, jdbc-postgresql, keycloak-authorization, narayana-jta, oidc, rest-client-reactive, rest-client-reactive-jackson, resteasy-reactive, resteasy-reactive-jackson, security, smallrye-context-propagation, smallrye-fault-tolerance, smallrye-metrics, smallrye-openapi, smallrye-opentracing, swagger-ui, vertx]
+2023-09-06 15:02:52,521 laptop-94lsl877 shop-dev.jar[8740] WARN  [io.ver.cor.imp.BlockedThreadChecker] (vertx-blocked-thread-checker) Thread Thread[vert.x-eventloop-thread-5,5,main] has been blocked for 2669 ms, time limit is 2000 ms: io.vertx.core.VertxException: Thread blocked
+	at java.base@17.0.8/sun.nio.ch.WEPoll.wait(Native Method)
+	at java.base@17.0.8/sun.nio.ch.WEPollSelectorImpl.doSelect(WEPollSelectorImpl.java:111)
+	at java.base@17.0.8/sun.nio.ch.SelectorImpl.lockAndDoSelect(SelectorImpl.java:129)
+	at java.base@17.0.8/sun.nio.ch.SelectorImpl.select(SelectorImpl.java:141)
+	at io.netty.channel.nio.SelectedSelectionKeySetSelector.select(SelectedSelectionKeySetSelector.java:62)
+	at io.netty.channel.nio.NioEventLoop.select(NioEventLoop.java:883)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:526)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	at java.base@17.0.8/java.lang.Thread.run(Thread.java:833)
+

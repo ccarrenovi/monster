@@ -1,0 +1,39 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:10.5
+    container_name: monster-db
+    secrets:
+      - user
+      - pass
+      - db
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER_FILE: /run/secrets/user
+      POSTGRES_PASSWORD_FILE: /run/secrets/pass
+      POSTGRES_DB_FILE: /run/secrets/db
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: jaeger-co
+    ports:
+      - 5775:5775
+      - 6831:6831
+      - 6832:6832
+      - 5778:5778
+      - 16686:16686
+      - 14268:14268 
+  consul:
+    image: consul:1.7
+    container_name: consul-co
+    ports:
+      - 8500:8500
+      - 8501:8501
+    command: "agent -dev -ui -client=0.0.0.0 -bind=0.0.0.0 --https-port=8501"
+secrets:
+  user:
+    file: user.txt
+  pass:
+    file: pass.txt
+  db:
+    file: db.txt
